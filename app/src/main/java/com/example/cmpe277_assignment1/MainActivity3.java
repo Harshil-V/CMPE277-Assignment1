@@ -1,6 +1,7 @@
 package com.example.cmpe277_assignment1;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,10 @@ public class MainActivity3 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button back_btn = findViewById(R.id.btn_back_c);
+
+        back_btn.setOnClickListener(v -> finish());
+
     }
 }

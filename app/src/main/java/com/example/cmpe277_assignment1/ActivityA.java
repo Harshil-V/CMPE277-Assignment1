@@ -1,5 +1,6 @@
 package com.example.cmpe277_assignment1;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,13 +9,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityA extends AppCompatActivity {
 
     private int count = 0;
     private String sourceActivity = null;
 
     TextView thread_counter;
 
+    @SuppressLint("DefaultLocale")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
         thread_counter.setText(String.format("Thread Counter: %d", count));
 
         btn_activity_b.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            Intent intent = new Intent(ActivityA.this, ActivityB.class);
             sourceActivity = "ActivityB";
             startActivity(intent);
         });
 
         btn_activity_c.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+            Intent intent = new Intent(ActivityA.this, ActivityC.class);
             sourceActivity = "ActivityC";
             startActivity(intent);
         });
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btn_exit_app.setOnClickListener(v -> finishAffinity());
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     protected void onRestart() {
         super.onRestart();
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ActivityA.this);
         builder.setTitle("Sample Dialog");
         builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
         AlertDialog dialog = builder.create();

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityA extends AppCompatActivity {
 
-    private int count = 0;
+    private int count = 1;
     private String sourceActivity = null;
 
     TextView thread_counter;
@@ -29,7 +29,7 @@ public class ActivityA extends AppCompatActivity {
         Button dialog_btn = findViewById(R.id.btn_dialog);
         Button btn_exit_app = findViewById(R.id.btn_exit);
 
-        thread_counter.setText(String.format("Thread Counter: %d", count));
+        thread_counter.setText(String.format("Thread Counter: %04d", count));
 
         btn_activity_b.setOnClickListener(v -> {
             Intent intent = new Intent(ActivityA.this, ActivityB.class);
@@ -59,7 +59,7 @@ public class ActivityA extends AppCompatActivity {
             count += 10;
         }
 
-        thread_counter.setText(String.format("Thread Counter: %d", count));
+        thread_counter.setText(String.format("Thread Counter: %04d", count));
         sourceActivity = null;
     }
 

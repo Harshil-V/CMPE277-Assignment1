@@ -6,12 +6,12 @@ The purpose of the app is to understand the activity life cycle and the role of 
 
 ### Screenshots
 
-<img src="./screenshots/ActivityA.png" width="200" alt="Main Activity">
-<img src="./screenshots/ActivityB.png" width="200">
-<img src="./screenshots/ActivityA_B.png" width="200">
-<img src="./screenshots/ActivityC.png" width="200">
-<img src="./screenshots/ActivityA_C.png" width="200">
-<img src="./screenshots/DialogBox.png" width="200">
+<img src="./images/ActivityA.png" width="200" alt="Main Activity">
+<img src="./images/ActivityB.png" width="200">
+<img src="./images/ActivityA_B.png" width="200">
+<img src="./images/ActivityC.png" width="200">
+<img src="./images/ActivityA_C.png" width="200">
+<img src="./images/DialogBox.png" width="200">
 
 
 ## Authors
